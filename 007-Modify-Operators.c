@@ -34,14 +34,7 @@ int main(void)
             ?= 
     */
     
-    /*
-        1. Pre-Increment and Pre-Decrement 
-        2. Substitution 
-        3. Evaluation 
-        4. Assignment 
-        5. Post-Increment and Post-Decrement 
-    */
 
-
+    
     return 0;
 }

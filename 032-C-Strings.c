@@ -4,8 +4,8 @@
     Strings are actually one-dimensional array of characters terminated 
     by a null character '\0'. 
 
-
-    Function Types: 
+    
+    String Operation: 
     1. strcpy(s1, s2); //Copies string s2 into string s1.
     2. strcat(s1, s2); //Concatenates string s2 onto the end of string s1.
     3. strlen(s1); //Returns the length of string s1.

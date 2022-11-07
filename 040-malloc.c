@@ -1,31 +1,33 @@
+/*
+Declaration: 
+------------------------------------------------------------
+    void *malloc(size_t size) [size_t is unsigned integer and void* is a generic pointer]
+
+Parameters: 
+------------------------------------------------------------
+    > size − This is the size of the memory block, in bytes.
+
+Return Value: 
+------------------------------------------------------------
+    > This function returns a pointer to the allocated memory, or NULL if the request fails.
+*/
+
 #include <stdio.h>
 #include <stdlib.h>
 
 int main(void)
 {
-    struct Emp 
-    {
-        int eno;
-        char ename[20];
-        float esal;
+    int num; 
 
-    };
+    printf("Enter the Size of Array: ");
+    scanf("%d", &num); 
 
-    struct Emp* ptr;
-    
-    ptr = (struct Emp*) malloc(sizeof (struct Emp));
+    int *ptr = (int *) malloc(num * sizeof(int)); //Dynamically Allocated Array Size 
 
-    if(ptr == NULL) printf("Out of Memory Error!\n"); 
-    else
-    {
-        printf("Enter Employee Details: ");
-        scanf("%d %s %f", &ptr->eno, ptr->ename, &ptr->esal);
+    for(int i = 0; i<num; i++) ptr[i] = i + 1;
 
-        printf("Number: %d\n", ptr->eno);
-        printf("Name: %s\n", ptr->ename);
-        printf("Salary: %f\n", ptr->esal);
-    } 
-     
+    for(int i = 0; i<num; i++) printf(" %d", ptr[i]); 
+
     
 
 

@@ -3,7 +3,7 @@
 
 int main(void)
 {
-    void swap(int*, int*);
+    void swap(int *, int *);
     
     int num1 = 10; 
     int num2 = 20; 
@@ -18,7 +18,7 @@ int main(void)
 }
 
 
-void swap(int* x, int* y)
+void swap(int *x, int *y)
 {
     int temp = *x; 
 

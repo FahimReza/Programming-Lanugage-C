@@ -3,6 +3,7 @@
     ------------------------------------------------------------
     16-bit                      2-bytes                  2-bytes 
     32-bit                      4-bytes                  4-bytes
+    64-bit                      4-bytes                  8-bytes
 */
 
 
@@ -16,7 +17,7 @@ int main(void)
 
     ptr = &num; 
 
-    printf("%u\n", sizeof(int*)); 
+    printf("%u\n", sizeof(int *)); 
 
     return 0; 
 }

@@ -1,26 +1,21 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <string.h>
 
 int main(void)
 {
-    char *msg;
+    int num; 
 
-    msg = (char *) malloc(15); //Initial Memory Allocation 
+    printf("Enter the Size of Array: ");
+    scanf("%d", &num); 
 
-    strcpy(msg, "Pi Labs Academy"); 
-    printf("Size is: %u\n", sizeof(msg)); 
-    printf("Message is: %s and Address is: %u", msg, msg); 
+    int *ptr = (int *) malloc(num * sizeof(int)); //Dynamically Allocated Array Size 
 
-    //msg = (char *) realloc(msg, 50); //Reallocating Memory 
-    strcat(msg, ", Preparing for the Future");
+    for(int i = 0; i<num; i++) ptr[i] = i + 1;
 
-    printf("\nSize is: %u", sizeof(msg)); 
-    printf("\nMessage is: %s and Address is: %u", msg, msg); 
+    for(int i = 0; i<num; i++) printf(" %d", ptr[i]); 
 
-    free(msg); //Deallocate allocated memory. 
+    free(ptr); //Deallocates the Memory
 
-    printf("\nSize is: %u", sizeof(msg)); 
 
-    return 0; 
+    return 0;
 }

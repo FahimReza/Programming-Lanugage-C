@@ -25,17 +25,16 @@
 
 
 #include <stdio.h> 
+#include <stdint.h> //For using "Fixed width integer types" i.e uint8_t 
 
-void myFunction(void); //Function prototype declaration 
+void myExample1(void); //Function prototype declaration 
+void myExample2(void); //Function prototype declaration 
 
 
 int main(void)
 {
-    
-    int i = 35; 
-    int ans = ~(i);
-
-    printf("Answer is: %d\n", ans);
+    //myExample1();
+    myExample2();
 
 
 
@@ -45,10 +44,41 @@ int main(void)
 
 
 
-void myFunction(void) //Function Body
+void myExample1(void) //Function Body
 {
-    
+    int i = 35; 
+    int ans = ~(i);
+
+    printf("Answer is: %d\n", ans);
     
 }
 
 
+void myExample2(void) //Function Body
+{
+    uint8_t bitNumber = 0; 
+
+    printf("Type the number of bit you want to enter: ");
+    scanf("%d", &bitNumber);
+
+    char binary[bitNumber]; 
+    char onesComplement[bitNumber]; 
+    char twosComplement[bitNumber]; 
+
+    printf("\nEnter the binary number: ");
+    scanf("%s", binary);
+
+    {
+        printf("\nOnes Complement of the binary number is: ");
+
+        //Finding onesComplement in C
+        for(uint8_t count = 0; count <= bitNumber; count++)
+        {
+            if(binary[count] == '0') binary[count] = '1'; 
+            else if(binary[count] == '1') binary[count] = '0'; 
+        }
+
+        printf("%s", binary);
+    }
+    
+}
